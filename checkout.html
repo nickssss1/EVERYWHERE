@@ -28,67 +28,38 @@
             font-size: 4.5rem;
             margin-bottom: 20px;
             text-align: center;
+            opacity: 0;
+            animation: fadeIn 3s 2s forwards ease-in-out;
         }
 
         .product-container {
-            position: relative;
             width: 700px;
             height: auto;
             display: flex;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            animation: fadeIn 3s 0s forwards ease-in-out;
         }
 
         .product-container img {
             width: 500px;
             height: auto;
-            animation: fadeIn 2s forwards ease-in-out;
         }
 
-        .line {
-            position: absolute;
-            height: 3px;
-            background-color: white;
-        }
-
-        .line::before {
-            content: '';
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-            position: absolute;
-            top: -4px;
-            right: -5px;
-        }
-
-        .label {
-            position: absolute;
-            font-size: 1.2rem;
+        .description {
+            font-size: 1.5rem;
             font-family: 'CuritibaRegular', sans-serif;
-            font-weight: bold;
-            background: black;
-            padding: 5px 10px;
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 3s 4s forwards ease-in-out;
         }
 
-        .fire-proof {
-            top: 20%;
-            left: 10%;
-        }
-
-        .water-proof {
-            bottom: 15%;
-            left: 10%;
-        }
-
-        .cut-proof {
-            top: 10%;
-            right: 10%;
-        }
-
-        .bomb-proof {
-            bottom: 15%;
-            right: 10%;
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
 
         .back-button {
@@ -107,26 +78,15 @@
             background-color: black;
             color: white;
         }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
     </style>
 </head>
 <body>
-    <h1>THE DRAGANOV</h1>
     <div class="product-container">
         <img src="photo_2024-12-10_19-52-39-transformed.png" alt="Draganov Bag">
-        <div class="label fire-proof">Fire Proof</div>
-        <div class="label water-proof">Water Proof</div>
-        <div class="label cut-proof">Cut Proof</div>
-        <div class="label bomb-proof">Bomb Proof</div>
-        <div class="line" style="width: 200px; top: 22%; left: 50%; transform: rotate(45deg);"></div>
-        <div class="line" style="width: 150px; bottom: 20%; left: 50%; transform: rotate(-45deg);"></div>
-        <div class="line" style="width: 200px; top: 12%; right: 50%; transform: rotate(-45deg);"></div>
-        <div class="line" style="width: 150px; bottom: 20%; right: 50%; transform: rotate(45deg);"></div>
+    </div>
+    <h1>DRAGANOV</h1>
+    <div class="description">
+        <p>The Draganov bag is crafted from ancient dragon skin, offering unmatched durability. It is fireproof, waterproof, cutproof, and bombproof, ensuring ultimate protection in any situation.</p>
     </div>
     <a href="shop.html" class="back-button">BACK TO SHOP</a>
 </body>
