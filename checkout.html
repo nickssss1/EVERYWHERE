@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout - Bag Details</title>
+    <title>Checkout - Draganov Bag</title>
     <style>
         @font-face {
             font-family: 'CuritibaRegular';
@@ -25,35 +25,78 @@
 
         h1 {
             font-family: 'CuritibaRegular', sans-serif;
-            font-size: 3rem;
+            font-size: 4.5rem;
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        .product-image {
-            opacity: 0;
-            width: 600px;
+        .product-container {
+            position: relative;
+            width: 700px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-container img {
+            width: 500px;
             height: auto;
             animation: fadeIn 2s forwards ease-in-out;
         }
 
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        .line {
+            position: absolute;
+            height: 3px;
+            background-color: white;
         }
 
-        .product-description {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 1.5rem;
+        .line::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            right: -5px;
+        }
+
+        .label {
+            position: absolute;
+            font-size: 1.2rem;
+            font-family: 'CuritibaRegular', sans-serif;
+            font-weight: bold;
+            background: black;
+            padding: 5px 10px;
+        }
+
+        .fire-proof {
+            top: 20%;
+            left: 10%;
+        }
+
+        .water-proof {
+            bottom: 15%;
+            left: 10%;
+        }
+
+        .cut-proof {
+            top: 10%;
+            right: 10%;
+        }
+
+        .bomb-proof {
+            bottom: 15%;
+            right: 10%;
         }
 
         .back-button {
             margin-top: 30px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            color: white;
-            background-color: transparent;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            color: black;
+            background-color: white;
             border: 2px solid white;
             text-decoration: none;
             cursor: pointer;
@@ -61,17 +104,30 @@
         }
 
         .back-button:hover {
-            background-color: white;
-            color: black;
+            background-color: black;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Product Overview</h1>
-    <img src="photo_2024-12-10_19-52-39-transformed.png" alt="Bag Image" class="product-image">
-    <div class="product-description">
-        <p>The Anywhere x Louis Vuitton bag combines luxury and functionality. Perfect for travel, this bag is both stylish and practical.</p>
+    <h1>THE DRAGANOV</h1>
+    <div class="product-container">
+        <img src="photo_2024-12-10_19-52-39-transformed.png" alt="Draganov Bag">
+        <div class="label fire-proof">Fire Proof</div>
+        <div class="label water-proof">Water Proof</div>
+        <div class="label cut-proof">Cut Proof</div>
+        <div class="label bomb-proof">Bomb Proof</div>
+        <div class="line" style="width: 200px; top: 22%; left: 50%; transform: rotate(45deg);"></div>
+        <div class="line" style="width: 150px; bottom: 20%; left: 50%; transform: rotate(-45deg);"></div>
+        <div class="line" style="width: 200px; top: 12%; right: 50%; transform: rotate(-45deg);"></div>
+        <div class="line" style="width: 150px; bottom: 20%; right: 50%; transform: rotate(45deg);"></div>
     </div>
-    <a href="shop.html" class="back-button">Back to Shop</a>
+    <a href="shop.html" class="back-button">BACK TO SHOP</a>
 </body>
 </html>
