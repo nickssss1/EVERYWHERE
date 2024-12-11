@@ -38,15 +38,23 @@
         }
 
         .product img {
-            width: 400px;
+            width: 1200px;
             height: auto;
             transition: opacity 0.3s ease-in-out;
+        }
+
+        .product img.default-image {
+            opacity: 1;
         }
 
         .product img.hover-image {
             position: absolute;
             top: 0;
             left: 0;
+            opacity: 0;
+        }
+
+        .product:hover img.default-image {
             opacity: 0;
         }
 
@@ -84,6 +92,6 @@
         <img src="photo_2024-12-10_19-56-20-transformed.png" alt="Product Hover Image" class="hover-image">
         <div class="product-name">THE DRAGANOV</div>
     </div>
-    <a href="homepage_storefront.html" class="home-button">Go Back</a>
+    <a href="index.html" class="home-button">Go Back</a>
 </body>
 </html>
