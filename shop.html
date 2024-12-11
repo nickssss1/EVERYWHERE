@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Everywhere Storefront</title>
+    <style>
+        @font-face {
+            font-family: 'CuritibaRegular';
+            src: url('CuritibaRegular-ow7ex.ttf') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-family: 'CuritibaRegular', sans-serif;
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        .product {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .product img {
+            width: 400px;
+            height: auto;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .product img.hover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .product:hover img.hover-image {
+            opacity: 1;
+        }
+
+        .product-name {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        .home-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>SHOP</h1>
+    <div class="product">
+        <img src="photo_2024-12-10_19-52-39-transformed.png" alt="Product Image" class="default-image">
+        <img src="photo_2024-12-10_19-56-20-transformed.png" alt="Product Hover Image" class="hover-image">
+        <div class="product-name">THE DRAGANOV</div>
+    </div>
+    <a href="homepage_storefront.html" class="home-button">Go Back</a>
+</body>
+</html>
