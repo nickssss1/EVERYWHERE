@@ -13,17 +13,34 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
             height: 100vh;
             background-color: black;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
         }
 
-        .container {
+        .image-row {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-row img {
+            width: 20%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             text-align: center;
+            z-index: 10;
         }
 
         h1 {
@@ -47,32 +64,19 @@
             background-color: white;
             color: black;
         }
-
-        .image-row {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-            gap: 10px;
-        }
-
-        .image-row img {
-            width: 150px;
-            height: auto;
-            border: 2px solid white;
-        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="overlay">
         <h1>EVERYWHERE</h1>
         <button class="shop-button">SHOP</button>
-        <div class="image-row">
-            <img src="photo_2024-12-10_19-41-37.jpg" alt="Image 1">
-            <img src="photo_2024-12-10_19-41-37 (2).jpg" alt="Image 2">
-            <img src="photo_2024-12-10_19-41-37 (3).jpg" alt="Image 3">
-            <img src="photo_2024-12-10_19-41-37 (4).jpg" alt="Image 4">
-            <img src="photo_2024-12-10_19-41-37 (5).jpg" alt="Image 5">
-        </div>
+    </div>
+    <div class="image-row">
+        <img src="photo_2024-12-10_19-41-37.jpg" alt="Image 1">
+        <img src="photo_2024-12-10_19-41-37 (2).jpg" alt="Image 2">
+        <img src="photo_2024-12-10_19-41-37 (3).jpg" alt="Image 3">
+        <img src="photo_2024-12-10_19-41-37 (4).jpg" alt="Image 4">
+        <img src="photo_2024-12-10_19-41-37 (5).jpg" alt="Image 5">
     </div>
 </body>
 </html>
