@@ -28,7 +28,7 @@
             font-size: 4rem;
             margin: 0;
             position: relative;
-            top: 80px; /* Adjusted to move the header 2 inches down */
+            top: 80px;
         }
 
         .product {
@@ -71,6 +71,23 @@
             font-family: 'CuritibaRegular', sans-serif;
         }
 
+        .buy-button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: black;
+            background-color: white;
+            border: 2px solid white;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: black;
+            color: white;
+        }
+
         .home-button {
             margin-top: 20px;
             padding: 10px 20px;
@@ -91,12 +108,11 @@
 </head>
 <body>
     <h1>SHOP</h1>
-    <div class=\"product\">
-        <a href=\"checkout.html\">
-            <img src=\"photo_2024-12-10_19-52-39-transformed.png\" alt=\"Product Image\" class=\"default-image\">
-        </a>
+    <div class="product">
+        <img src="photo_2024-12-10_19-52-39-transformed.png" alt="Product Image" class="default-image">
         <img src="photo_2024-12-10_19-56-20-transformed.png" alt="Product Hover Image" class="hover-image">
         <div class="product-name">ANYWHERE X LOUISVUITTON</div>
+        <a href="checkout.html" class="buy-button">BUY NOW</a>
     </div>
     <a href="index.html" class="home-button">Go Back</a>
 </body>
